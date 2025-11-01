@@ -19,7 +19,10 @@ file_menu.add_separator()
 file_menu.add_command(label = 'exit',command = root.destroy)
 
 menubar.add_cascade(label = 'file',menu = file_menu)
-
 root.config(menu = menubar)
+ 
+button = tk.Button(root, text = "Click me", fg = 'pink', bg = 'blue', font=('Arial', 15))
+button.place(relx = 0.5, rely = 0.5, anchor='center')
+
 root.mainloop()
  
