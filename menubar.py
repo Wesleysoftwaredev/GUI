@@ -21,8 +21,14 @@ file_menu.add_command(label = 'exit',command = root.destroy)
 menubar.add_cascade(label = 'file',menu = file_menu)
 root.config(menu = menubar)
  
-button = tk.Button(root, text = "Click me", fg = 'pink', bg = 'blue', font=('Arial', 15))
-button.place(relx = 0.5, rely = 0.5, anchor='center')
+button1 = tk.Button(root, text = "Click me", fg = 'pink', bg = 'blue', font=('Arial', 15))
+button1.place(relx = 0.5, rely = 0.5, anchor='center')
+
+button2 = tk.Button(root, text = "Dont click me", fg = 'purple', bg = 'red', font=('Arial', 15))
+button2.place(relx = 0.5, rely = 0.7, anchor='center')
+
+button3 = tk.Button(root, text = "Never click me", fg = 'yellow', bg = 'green', font=('Arial', 15))
+button3.place(relx = 0.5, rely = 0.9, anchor='center')
 
 root.mainloop()
  
