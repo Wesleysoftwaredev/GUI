@@ -14,6 +14,9 @@ progress1.pack(pady=20)
 progress2 = ttk.Progressbar(root,orient='horizontal',length=300,mode='determinate')
 progress2.pack(pady=50)
 
+progress3 = ttk.Progressbar(root,orient='horizontal',length=300,mode='determinate')
+progress3.pack(pady=70)
+
 def start_progress1(i=0):
     if i <= 100:
         progress1['value'] = i
@@ -24,8 +27,16 @@ def start_progress2(i=0):
         progress2['value'] = i
         root.after(50, start_progress2, i+1)
 
+def start_progress3(i=0):
+    if i <= 100:
+        progress3['value'] = i
+        root.after(70, start_progress3, i+1)
+
 btn1 = tk.Button(root, text='Start Progress 1', command=start_progress1)
 btn1.pack(pady=5)
 btn2 = tk.Button(root, text='Start Progress 2', command=start_progress2)
 btn2.pack(pady=5)
+btn3 = tk.Button(root, text='Start Progress 3', command=start_progress3)
+btn3.pack(pady=5)
+
 root.mainloop()
