@@ -13,6 +13,11 @@ def increase():
     count +=1
     label.config(text=str(count))
 
+def reset():
+    global count
+    count = 0
+    label.config(text=str(count))
+
 root = tk.Tk()
 root.title("Counter App")
 root.geometry("200x120")
@@ -20,10 +25,13 @@ root.geometry("200x120")
 label = ttk.Label(root, text="0", font=("Arial", 20))
 label.pack(pady=10)
 
-button = ttk.Button(root, text="decrease", command=decrease)
+button = ttk.Button(root, text="Decrease", command=decrease)
 button.pack()
 
-button = ttk.Button(root, text="increase", command=increase)
+button = ttk.Button(root, text="Increase", command=increase)
+button.pack()
+
+button = ttk.Button(root, text="Reset", command=reset)
 button.pack()
 
 root.mainloop()
